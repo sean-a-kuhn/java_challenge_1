@@ -1,5 +1,5 @@
 // This class implements a method that passes in a node from a tree, and returns an arraylist containing
-// a list of the given node and all of its children nodes
+// a list of the given node and all of its children nodes.  Each node in the list is unique--there are no duplicates.
 // This program assumes an acyclic, directed graph of type GNode
 
 import java.util.ArrayList;
@@ -7,25 +7,33 @@ import java.util.ArrayList;
 public class WalkGraph{
    public static void main(String[] args){
    
-      public ArrayList<GNode> walkGraph(GNode passme){
+      public ArrayList<GNode> walkGraph(GNode node){
       
-            ArrayList<GNode> returnList = new ArrayList<GNode>();  
-            returnList = addNodes(returnList, passme);           
-            return returnList;
+         // Create arraylist to contain list of all GNodes in a given directed graph with passed in node as the root
+         ArrayList<GNode> returnList = new ArrayList<GNode>();  
+         
+         // Call function *addNodes* passing in the arraylist and root node
+         returnList = addNodes(returnList, node);           
+         
+         return returnList;
       }  
    }
    
+   // This function takes an arraylist and a node
+   // It recursively walks a directed graph and adds passed in nodes to the arraylist
    public ArrayList<GNode> addNodes(ArrayList al, GNode node){
    
+      // Check that the arraylist does not contain the current node
+      // If the node is not already in the list, add the node and call *addNodes* on all children nodes
       if (!al.contains(node)){          
          al.add(node);                       
          if (node.getChildren().length > 0){         
-            GNode[] array = node.getChildren();            
-            for (int i = 0; i < array.length; i++){
-               al = addNodes(al, array[i]);
+            GNode[] children = node.getChildren();            
+            for (int i = 0; i < children.length; i++){
+               al = addNodes(al, children[i]);
             }
          }  
-      }          
+      }
       return al;
    }    
 }
