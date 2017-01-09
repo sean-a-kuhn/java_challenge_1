@@ -1,5 +1,5 @@
 # java_challenge_1
-returns all nodes in a given acyclic, directed graph
+returns all nodes as a list without duplicates from a given acyclic, directed graph
 
 nodes are of type GNode:
   public interface GNode {
@@ -12,5 +12,5 @@ nodes are of type GNode:
 Initial definition:
   public ArrayList walkGraph(GNode);
   
-In my implementation, I initially used the definition as a wrapper function for a recursive method requiring an arraylist to be passed
+In my implementation, I use the definition as a wrapper function for a recursive method requiring an arraylist to be passed
 in as an argument as well as the node.
