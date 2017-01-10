@@ -14,3 +14,5 @@ Initial definition:
   
 In my implementation, I use the definition as a wrapper function for a recursive method requiring an arraylist to be passed
 in as an argument as well as the node.
+
+TO TEST: create a graph within the main method, and pass in a node from the graph into the walkGraph(____) method call.
