@@ -16,3 +16,5 @@ In my implementation, I use the definition as a wrapper function for a recursive
 in as an argument as well as the node.
 
 TO TEST: create a graph within the main method, and pass in a node from the graph into the walkGraph(____) method call.
+
+OUTPUT: a list of names of GNodes contained in graph, organized as 10 names per line.
