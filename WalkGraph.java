@@ -7,7 +7,37 @@ import java.util.ArrayList;
 public class WalkGraph{
    public static void main(String[] args){
    
-      public ArrayList<GNode> walkGraph(GNode node){
+        /* Create a graph of GNodes */
+      
+        // Allocate memory to hold list of GNodes in graph
+        ArrayList<GNode> vertices = new ArrayList<GNode>();
+        
+        // Call function to generate GNode list from graph
+        vertices = walkGraph(/* insert root GNode */);
+        
+        // Print names of GNodes in graph
+        System.out.println("Directed Graph starting at given root contains the following GNodes:");
+        int counter = 0;
+        for (int i = 0; i < vertices.size(); i++){
+           
+           // Counter used to print GNode names at 10 names per line
+           if (counter == 10){
+              counter = 0;
+              System.out.println();
+           }
+           //  Prints the last GNode's name without a comma
+           if (i == vertices.size()-1){
+              System.out.print(vertices[i].getName());
+              break;
+           }             
+           System.out.print(vertices[i].getName() + ", ");
+           counter++;
+        }
+         
+   }
+   
+   // Method call to return an arraylist of GNodes contained in an acyclic, directed graph starting at passed in root *node
+   public ArrayList<GNode> walkGraph(GNode node){
       
          // Create arraylist to contain list of all GNodes in a given directed graph with passed in node as the root
          ArrayList<GNode> returnList = new ArrayList<GNode>();  
@@ -16,7 +46,6 @@ public class WalkGraph{
          returnList = addNodes(returnList, node);           
          
          return returnList;
-      }  
    }
    
    // This function takes an arraylist and a node
