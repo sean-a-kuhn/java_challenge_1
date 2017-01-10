@@ -17,13 +17,13 @@ public class WalkGraph{
         
         // Print names of GNodes in graph
         System.out.println("Directed Graph starting at given root contains the following GNodes:");
-        int counter = 0;
+        int counter = 10;
         for (int i = 0; i < vertices.size(); i++){
            
            // Counter used to print GNode names at 10 names per line
            if (counter == 10){
               counter = 0;
-              System.out.println();
+              System.out.print("\n\t");
            }
            //  Prints the last GNode's name without a comma
            if (i == vertices.size()-1){
