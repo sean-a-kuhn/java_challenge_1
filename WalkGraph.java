@@ -27,10 +27,10 @@ public class WalkGraph{
            }
            //  Prints the last GNode's name without a comma
            if (i == vertices.size()-1){
-              System.out.print(vertices[i].getName());
+              System.out.print(vertices.get(i).getName());
               break;
            }             
-           System.out.print(vertices[i].getName() + ", ");
+           System.out.print(vertices.get(i).getName() + ", ");
            counter++;
         }    
    }
