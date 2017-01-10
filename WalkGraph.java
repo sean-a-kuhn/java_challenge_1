@@ -32,8 +32,7 @@ public class WalkGraph{
            }             
            System.out.print(vertices[i].getName() + ", ");
            counter++;
-        }
-         
+        }    
    }
    
    // Method call to return an arraylist of GNodes contained in an acyclic, directed graph starting at passed in root *node
